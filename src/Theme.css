@@ -1,0 +1,57 @@
+:root {
+	font-family: Helvetica, Arial, sans-serif;
+	--color-1: #ffcc33  ;
+	--color-2: white;
+	--color-3: #666;
+}
+
+.cs-background {
+	background: var(--color-1);
+}
+
+.cs-element {
+	border: solid 2px var(--color-3);
+	border-radius: .25em;
+	background: var(--color-2);
+	color: var(--color-3);
+	padding: .125em;
+}
+
+.bike-station-item .cs-element-head {
+	text-align: center;
+	width: 1.333em;
+}
+
+.cs-title {
+	color: var(--color-3);
+	text-align: center;
+}
+
+.cs-footer {
+	background: linear-gradient(0deg, var(--color-1), var(--color-1) .58333rem, transparent .8333rem);
+	bottom: 0;
+	color: var(--theme-secondary-color);
+	font-size: 0.333rem;
+	padding: .25rem 0;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+}
+
+.cs-footer .divider {
+	display: inline-block;
+	text-align: center;
+	width: 0.5rem;
+}
+
+.cs-footer a {
+	color: var(--color-3);
+}
+
+.cs-footer a:visited {
+	color: var(--color-3);
+}
+
+.cs-footer a:hover {
+	color: var(--color-3);
+}
