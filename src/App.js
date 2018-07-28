@@ -96,7 +96,7 @@ class App extends Component {
 					</CSCenterBox>
 					<CSFooter>
 						<a className='effect-link' href='https://github.com/kangasta/bikes'>kangasta / bikes</a>
-						<span className='app-footer-divider'>|</span>
+						<span className='divider'>|</span>
 						<a className='effect-link' href='https://digitransit.fi/en/developers/'>data source</a>
 					</CSFooter>
 					<CSBackground/>
@@ -116,7 +116,7 @@ class App extends Component {
 					</CSCenterBox>
 					<CSFooter>
 						<a className='effect-link' href='https://github.com/kangasta/bikes'>kangasta / bikes</a>
-						<span className='app-footer-divider'>|</span>
+						<span className='divider'>|</span>
 						<a className='effect-link' href='https://digitransit.fi/en/developers/'>data source</a>
 					</CSFooter>
 					<CSBackground/>
