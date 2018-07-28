@@ -13,7 +13,7 @@ import {
 	CSWhiteSpace
 } from 'chillisalmon';
 
-import './Theme.css'
+import './Theme.css';
 
 
 class App extends Component {
@@ -88,9 +88,25 @@ class App extends Component {
 	}
 
 	render() {
+		if (this.state.data.hasOwnProperty('loading')) {
+			return (
+				<div className='App'>
+					<CSCenterBox>
+						<CSLoading>{this.state.data.loading}</CSLoading>
+					</CSCenterBox>
+					<CSFooter>
+						<a className='effect-link' href='https://github.com/kangasta/bikes'>kangasta / bikes</a>
+						<span className='app-footer-divider'>|</span>
+						<a className='effect-link' href='https://digitransit.fi/en/developers/'>data source</a>
+					</CSFooter>
+					<CSBackground/>
+				</div>
+			);
+		}
+
 		var bikeStationArr;
 		try {
-			bikeStationArr = this.state.data.nearest.edges
+			bikeStationArr = this.state.data.nearest.edges;
 		}
 		catch(e) {
 			return (
@@ -105,23 +121,7 @@ class App extends Component {
 					</CSFooter>
 					<CSBackground/>
 				</div>
-			)
-		}
-
-		if (this.state.data.hasOwnProperty('loading')) {
-			return (
-				<div className='App'>
-					<CSCenterBox>
-						<CSLoading>{this.state.data.loading}</CSLoading>
-					</CSCenterBox>
-					<CSFooter>
-						<a className='effect-link' href='https://github.com/kangasta/bikes'>kangasta / bikes</a>
-						<span className='app-footer-divider'>|</span>
-						<a className='effect-link' href='https://digitransit.fi/en/developers/'>data source</a>
-					</CSFooter>
-					<CSBackground/>
-				</div>
-			)
+			);
 		}
 
 		return (
@@ -129,7 +129,8 @@ class App extends Component {
 				<CSCentered>
 					<CSTitle>Bikes</CSTitle>
 					<CSList>
-						{bikeStationArr.map((a)=><CSElement
+						{bikeStationArr.map((a,i)=><CSElement
+							key={i.toString()}
 							className='bike-station-item'
 							head={a.node.place.bikesAvailable || '0'}
 							title={a.node.place.name}>{a.node.distance < 1000 ? a.node.distance.toString() + ' m' : (Math.round(a.node.distance/100)/10).toString() + ' km'}
