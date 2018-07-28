@@ -1,6 +1,7 @@
 {
   "name": "bikes",
-  "version": "0.5.0",
+  "homepage": "https://kangasta.github.io/bikes",
+  "version": "0.5.1",
   "private": true,
   "devDependencies": {
     "react-scripts": "1.1.4"
